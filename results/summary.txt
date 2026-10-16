@@ -1,0 +1,33 @@
+Links
+  Masses                         [0.8734 0.6987] kg
+  Mismodelled masses             [1.004 0.6376] kg
+Inverse kinematics, elbow up [deg]
+  Pick                           [-125.01 55.992 -93.487]
+  Via point 1 (lifted 0.4 m)     [-125.01 65.662 -77.868]
+  Via point 2                    [14.989 65.662 -77.868]
+  Place                          [14.989 8.0206 -99.988]
+  Erroneous start                [-140.32 70.5 -89.212] (within limits: 0)
+  Initial error                  [15.3 -14.5 -4.28]
+Trajectories
+  Quintic                        max |tau| [5.95 4.14 0.823] N m, min tool height 0.340 m, min elbow height 1.140 m, joint limits respected 1
+  Quintic, via points            max |tau| [12 4.91 3.28] N m, min tool height 0.340 m, min elbow height 1.140 m, joint limits respected 1
+  Parabolic blends               max |tau| [4.54 4.42 0.783] N m, min tool height 0.340 m, min elbow height 1.140 m, joint limits respected 1
+  Parabolic blends, via points   max |tau| [9.24 7.77 3.16] N m, min tool height 0.340 m, min elbow height 1.140 m, joint limits respected 1
+Control, from the erroneous start
+  Quintic
+    Linear, independent joints           error after 2 s [0.00274 0.127 0.0376] deg, below 1 deg after 0.31 s, saturated until 0.15 s
+    Computed torque                      error after 2 s [1.27e-09 4.34e-10 5.88e-11] deg, below 1 deg after 0.30 s, saturated until 0.14 s
+    Computed torque, mismodelled links   error after 2 s [0.00101 0.0228 0.00742] deg, below 1 deg after 0.30 s, saturated until 0.15 s
+  Quintic, via points
+    Linear, independent joints           error after 2 s [0.0158 0.126 0.054] deg, below 1 deg after 0.31 s, saturated until 0.15 s
+    Computed torque                      error after 2 s [2.76e-09 3.41e-09 1.31e-09] deg, below 1 deg after 0.30 s, saturated until 0.14 s
+    Computed torque, mismodelled links   error after 2 s [0.000122 0.0274 0.00949] deg, below 1 deg after 0.30 s, saturated until 0.14 s
+  Parabolic blends
+    Linear, independent joints           error after 2 s [0.00517 0.127 0.0335] deg, below 1 deg after 0.31 s, saturated until 0.15 s
+    Computed torque                      error after 2 s [2.25e-07 7.69e-08 1.04e-08] deg, below 1 deg after 0.30 s, saturated until 0.15 s
+    Computed torque, mismodelled links   error after 2 s [0.00207 0.0233 0.00692] deg, below 1 deg after 0.30 s, saturated until 0.15 s
+  Parabolic blends, via points
+    Linear, independent joints           error after 2 s [0.0232 0.129 0.0533] deg, below 1 deg after 0.31 s, saturated until 0.15 s
+    Computed torque                      error after 2 s [8.37e-09 5.3e-07 2.03e-07] deg, below 1 deg after 0.30 s, saturated until 0.14 s
+    Computed torque, mismodelled links   error after 2 s [0.000504 0.0326 0.00945] deg, below 1 deg after 0.30 s, saturated until 0.14 s
+Linear control: expected gravity droop G/(alpha kp) at the place pose [0 0.128 -0.0019] deg
