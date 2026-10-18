@@ -118,19 +118,6 @@ The mismodelled computed torque controller is four times better than the linear 
 
 ![Joint torques of the three controllers](results/figures/control_torques.png)
 
-## Notes on the 2021 solution
-
-This is a rewrite of my exam solution for Space Robotic Systems (Sapienza University of Rome, 2021).
-Rewriting it showed that the Newton-Euler equations were right (they match the new code to 10⁻¹⁵), but:
-
-- the open loop torques used the joint angles instead of the joint rates in the friction term, which inflated the azimuth torque to 28 N m;
-- Mars gravity was 3.37 m/s² instead of 3.71 m/s², and the target y coordinate −0.431 m instead of −0.430 m;
-- the erroneous initial position needs an azimuth of −140.3°, beyond the −135° joint limit, so the inverse kinematics found no solution and the angles were typed in by hand; here it is kept as the disturbance to recover from, and flagged;
-- the elbow up solution was picked by its row index after discarding the solutions beyond the limits;
-- the controllers read the desired acceleration interpolated from the 10 Hz samples; the trajectories are now evaluated exactly at any time.
-
-The Coulomb friction step is smoothed over 10⁻³ rad/s: with an exact step the integrator stalls where the arm stops at the via points.
-
 ## References
 
 - J. J. Craig, *Introduction to Robotics: Mechanics and Control*, Pearson (DH convention, Newton-Euler dynamics, trajectories, control).
